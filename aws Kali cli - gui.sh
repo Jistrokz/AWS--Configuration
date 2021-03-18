@@ -4,14 +4,14 @@ sudo sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/
 
 sudo /etc/init.d/ssh restart
 
-sudo passwd Ubuntu
+sudo passwd kali
 
 sudo apt install xrdp xfce4 xfce4-goodies tightvncserver
 
-echo xfce4-session$ /home/ubuntu/.xsession  ##### NOTE: Replace the $ with the Greater Than Sign
+echo xfce4-session$ /home/kali/.xsession  ##### NOTE: Replace the $ with the Greater Than Sign
 
 
-sudo cp /home/ubuntu/.xsession /etc/skel
+sudo cp /home/kali/.xsession /etc/skel
 
 sudo sed -i '0,/-1/s//ask-1/' /etc/xrdp/xrdp.ini
 
